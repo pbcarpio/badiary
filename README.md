@@ -1,2 +1,6 @@
-# badiary
-Documentation of learning to become a more "technical" BA
+# BA-Diary
+
+Greetings!
+
+I am a "self-taught" BA with no technical background;
+Here I document my learnings and acquired knowledge.
