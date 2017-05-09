@@ -1,0 +1,90 @@
+My current workplace, has been such a pivotal point in my career as a BA.
+Being self-taught, I come with challenges and a lack of common knowledge on the project floor.
+This isn't so bad though, I don't think;
+I come with a fresh mind and an eagerness to absorb all of this.
+One of the biggest ticket items of learning for me has been exposure to Behaviour Driven Development (more so, testing).
+I attempted (with great difficulty!) to write my first Gherkin feature files.
+I was so bad that it got to a point where a more experienced BA had to help me;
+
+Then I did my own research and came across these pages which I found oh so helpful!:
+
+Firstly, an introduction to BDD: https://automationpanda.com/2017/01/25/bdd-101-introducing-bdd/:
+    "Behaviour-Driven Development (BDD) is a test-centric software development process tha tgrew out of Test-Driven Development (TDD).
+    It has been around since roughly the mid-2000s. BDD focuses on clearly identifying the desired behaviour of a feature from the very start.
+    It captures a product's behaviour as a set of "given-when-then" scenarios written in a domain-specific language called Gherkin,
+    which serve as both the product's requirements/acceptance criteria (before development) and its test cases (after development). With the
+    help of automation tools, scnearios can easily be turned into automation tools, scenarios can easily be turned into autoamted test cases.
+    Anybody from engineers to product owners can write BDD scenarios, since they are just English phrases. BDD keeps developers focused on
+    delivering precisely what the product owner wants. It also expedites testing. As such, BDD pairs nicely with Agile Software Development."
+
+Secondly, an excellent guide on writing good gherkin!: https://automationpanda.com/2017/01/30/bdd-101-writing-good-gherkin/
+
+Introduction to the Gherkin language: https://automationpanda.com/2017/01/26/bdd-101-the-gherkin-language/
+
+Then a simple instruction and download for syntax highlighting for feature fules: https://github.com/famished-tiger/gherkin-highlighting  
+  Excerpt;
+    Given some initial state
+    When an action is taken
+    Then verify an outcome
+    
+Gherkin Words from https://automationpanda.com/2017/01/26/bdd-101-the-gherkin-language/:
+Keyword	Purpose
+Feature	
+    section denoting product or feature under test
+    contains a one-line title
+    contains extra lines for description
+    description should include the user story
+    may have one Background section
+    may have multiple Scenario and Scenario Outline sections
+    should be one Feature per feature file
+Scenario	
+    section for a specific behavior scenario
+    contains a one-line title
+    contains multiple Given, When, and Then steps
+    each type of step is optional
+    order matters
+Given	
+    step to define the preconditions (initial state or context)
+    should put the product under test into the desired state
+    may be parameterized
+When	
+    step to define the action to be performed
+    may be parameterized
+Then	
+    step to define the expected result from the action taken by When
+    may be parameterized
+And	
+    an additional step added to a Given, When, or Then
+    used instead of repeating Given, When, or Then
+    example: Given-Given-When-Then = Given-And-When-Then
+    associated with the immediately preceding step
+    order matters
+But	
+    functions the same as And, but might be easier to read
+    interchangeable with And
+Background	
+    a section of Given and And statements to run before each scenario
+    does not have a title or description
+    only one Background for each Feature section
+Scenario Outline	
+    a templated scenario section
+    uses “<” and “>” to identify parameter names
+    followed by Examples tables that provides parameter values
+    may have more than one Examples tables
+    parameters are substituted when the tests run
+Examples	
+    a section to provide a table of parameter values for a Scenario Outline
+    each table row represents a combination of values to test together
+    may have any positive number of rows
+|	
+    table delimeter used for Examples tables and step tables
+“””	
+    doc string delimiter for passing large text into a step
+    doc strings may be multi-line
+@	
+    prefix for a tag: @
+    tags may be placed before Feature or Scenario sections
+    tags are used to filter scenarios
+#	
+    prefix for a comment line
+    comments are not read by the Gherkin parser
